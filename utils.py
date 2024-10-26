@@ -2,6 +2,11 @@ from langchain_core.documents import Document
 from pydantic import BaseModel
 import requests 
 import os
+import streamlit as st
+
+JINA_API_KEY = st.secrets["JINA_API_KEY"]
+SERPER_API_KEY = st.secrets["SERPER_API_KEY"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 def ggsearch_reformat(result):
     """
@@ -80,7 +85,7 @@ def jina_scrape(site):
     """
     jina_url = f'https://r.jina.ai/{site}'
     headers = {
-        'Authorization': f'Bearer {os.environ["JINA_API_KEY"]}'
+        'Authorization': f'Bearer {JINA_API_KEY}'
     }
     
     response = requests.get(jina_url, headers=headers)

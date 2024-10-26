@@ -17,27 +17,30 @@ import json
 import logging
 logging.basicConfig(level=logging.INFO)
 
+JINA_API_KEY = st.secrets["JINA_API_KEY"]
+SERPER_API_KEY = st.secrets["SERPER_API_KEY"]
+OPENAI_API_KEY = st.secrets["OPENAI_API_KEY"]
 
 import utils
 importlib.reload(utils)
 from utils import *
 
-load_dotenv()
+# load_dotenv()
 
 # Initialize model
-model = ChatOpenAI(model_name="gpt-4o", temperature=0)
+model = ChatOpenAI(model_name="gpt-4o", temperature=0, api_key=OPENAI_API_KEY)
 
 # Define schema
 class State(TypedDict):
     messages: Annotated[Sequence[BaseMessage], add_messages]
 
 # Tool
-search = GoogleSerperAPIWrapper(k=2)
+search = GoogleSerperAPIWrapper(k=2, api_key=SERPER_API_KEY)
 
 @tool
 def google_search(query: str) -> str:
     """Conduct Search on Wake Forest MSBA Website for user question"""
-    google_results = search.results(f'{query} site:business.wfu.edu/')
+    google_results = search.results(f'{query} site:business.wfu.edu/',)
     
     if not google_results:
         return "No results found for your query."
