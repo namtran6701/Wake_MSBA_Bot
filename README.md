@@ -71,7 +71,7 @@ streamlit run app.py
 - `utils.py`: Utility functions for search result formatting and web scraping
 - `requirements.txt`: List of Python dependencies
 - `.streamlit/secrets.toml`: Configuration file for API keys (not included in repository)
-
+- `.github/workflows/keep-alive.yml`: Workflow to keep the Streamlit app alive
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
