@@ -115,7 +115,7 @@ def should_continue(state: State):
 # Define and compile the graph
 
 def main():
-    st.title("Wake Forest MSBA Information")
+    st.title("Wake Forest School of Business Information")
     
     # Example questions for user guidance
     examples = [
@@ -144,7 +144,7 @@ def main():
     # Create a form to handle both Enter key and Submit button
     with st.form(key='my_form'):
         user_input = st.text_input(
-            "Tell us what you are curious about the program:",
+            "Tell us what program or information you are curious about:",
             value=st.session_state.user_input
         )
         submit_button = st.form_submit_button(label='Submit')
