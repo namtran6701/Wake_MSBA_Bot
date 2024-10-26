@@ -106,7 +106,6 @@ Nam Tran, MSBA '24
 
 ## Acknowledgments
 
-- Wake Forest School of Business
 - OpenAI
 - Streamlit
 - LangChain & LangGraph communities
