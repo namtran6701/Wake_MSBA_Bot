@@ -119,7 +119,6 @@ def main():
     
     # Example questions for user guidance
     examples = [
-        "What programs does Wake Forest School of Business offer?",
         "What are the application requirements for the MSBA program?",
         "What is the curriculum for the MSBA program like?",
         "Can you provide information on career services?",
