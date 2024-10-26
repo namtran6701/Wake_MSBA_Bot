@@ -115,7 +115,7 @@ def should_continue(state: State):
 # Define and compile the graph
 
 def main():
-    st.title("Wake Forest School of Business Information")
+    st.title("Wake Forest School of Business QA")
     
     # Example questions for user guidance
     examples = [
