@@ -2,6 +2,8 @@
 
 An interactive Streamlit application that provides information about Wake Forest School of Business programs using AI-powered search and natural language processing.
 
+https://wake-sob-assistant.streamlit.app/
+
 ## Features
 
 - Real-time Q&A about Wake Forest School of Business programs and services
